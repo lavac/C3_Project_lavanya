@@ -58,4 +58,8 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
+    public int getOrderValue(ArrayList<String> selectedItems) {
+        return 0;
+    }
 }
