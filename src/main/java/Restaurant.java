@@ -59,7 +59,8 @@ public class Restaurant {
         return name;
     }
 
-    public int getOrderValue(ArrayList<String> selectedItems) {
-        return 0;
+    public int getOrderValue(List<String> items) {
+        return menu.stream().filter(it -> items.contains(it.getName())).map(it -> it.getPrice())
+                .reduce((a, b) -> a+b).orElse(0);
     }
 }
